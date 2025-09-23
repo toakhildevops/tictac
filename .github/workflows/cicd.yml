@@ -7,7 +7,7 @@ on:
       - README.md
       - docs/**
       - .github/workflows/**
-        
+
   pull_request:
     branches:
       - main
@@ -112,6 +112,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }} 
 
       - name: metadata for docker
+        id: metadata
         uses: docker/metadata-action@v3
         with:
           images: ${{env.REGISTRY}}/${{ env.IMAGE_NAME }}
