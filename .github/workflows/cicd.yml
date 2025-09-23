@@ -151,7 +151,7 @@ jobs:
 
       - name: Set output image tag
         id: set_output
-        run: echo "image_tag=${{ steps.metadata.outputs.tags }}" >> $GITHUB_OUTPUT    
+        run: echo "image_tag=$(echo ${{ github.sha }} | cut -c1-7)" >> $GITHUB_OUTPUT    
 
 
          
