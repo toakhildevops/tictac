@@ -21,6 +21,6 @@ spec:
           image: ghcr.io/toakhildevops/tictac:sha-716d5853ac0e7dda6ec798e743e82ff4a49e568f
           imagePullPolicy: Always
           ports:
-            - containerPort: 8080
+            - containerPort: 80
       imagePullSecrets:
         - name: github-container-registry
