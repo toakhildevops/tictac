@@ -7,6 +7,7 @@ on:
       - README.md
       - docs/**
       - .github/workflows/**
+      - kubernetes/**
 
   pull_request:
     branches:
@@ -15,6 +16,7 @@ on:
       - README.md
       - docs/**
       - .github/workflows/**  
+      - kubernetes/**
 jobs:
   test:
     name: unit tests
