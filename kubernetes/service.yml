@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: tic-tac-toe-service
+  namespace: tic-tac-toe
+  labels:
+    app: tic-tac-toe
+spec:
+  type: clusterIP
+  selector:
+    app: tic-tac-toe
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080    

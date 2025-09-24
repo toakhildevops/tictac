@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: tic-tac-ingress
+  namespace: tic-tac-toe
+  annotations:
+    kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+    - host: tic-tac-toe.naynutty.xyz
+      http:
+        paths:
+         - path: /
+           pathType: Prefix
+           backend:
+              service:
+                name: tic-tac-toe-service
+                port:
+                  number: 80   
