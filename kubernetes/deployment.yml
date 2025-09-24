@@ -7,7 +7,7 @@ metadata:
   labels:
     app: tic-tac-toe
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: tic-tac-toe
