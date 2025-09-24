@@ -6,7 +6,7 @@ metadata:
   labels:
     app: tic-tac-toe
 spec:
-  type: clusterIP
+  type: ClusterIP
   selector:
     app: tic-tac-toe
   ports:
